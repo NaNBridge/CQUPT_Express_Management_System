@@ -1,1 +1,2 @@
-# It's just a push test
+# It's just a push test  
+pull test,next
