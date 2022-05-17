@@ -1,0 +1,3 @@
+[1] [日本]大塚弘记.GitHub入门与实践[M].支鹏浩,刘斌,译.北京:人民邮电出版社,2015
+[2] Leif Azzopardi , David Maxwell.Django 基础教程[M].安道,译.
+[3] 王维波,栗宝鹃,张晓东.Python Qt GUI与数据可视化编程[M].北京:人民邮电出版社,2018
