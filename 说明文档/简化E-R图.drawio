@@ -1,0 +1,63 @@
+<mxfile host="65bd71144e">
+    <diagram id="ZgBWn6kBh6qx81H8mYtZ" name="第 1 页">
+        <mxGraphModel dx="2950" dy="3338" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Packages" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
+                    <mxGeometry x="-847" y="-1190" width="195" height="110" as="geometry">
+                        <mxRectangle x="-855" y="1170" width="90" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="+package ID&#10;+package owner's phone number&#10;+shipping address&#10;+express company" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="2">
+                    <mxGeometry y="30" width="195" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Express Station" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+                    <mxGeometry x="-512" y="-1050" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="+package ID&#10;+pick up user's school ID&#10;+import time&#10;+export time&#10;+error status" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="4">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Users" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="-829.5" y="-880" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="+user name&#10;+user phone number&#10;+user student ID&#10;+user unique pickup code" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="6">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="3">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="-692" y="-980" as="sourcePoint"/>
+                        <mxPoint x="-592" y="-1080" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="affiliation" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FFFFFF;labelBackgroundColor=#FFCCFF;" vertex="1" connectable="0" parent="8">
+                    <mxGeometry x="-0.0236" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;startArrow=ERmany;entryX=-0.015;entryY=0.171;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="3" target="5">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="-692" y="-980" as="sourcePoint"/>
+                        <mxPoint x="-592" y="-1080" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="import" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#FFCCFF;" vertex="1" connectable="0" parent="10">
+                    <mxGeometry x="-0.026" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;startArrow=ERmany;entryX=-0.008;entryY=0.68;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="7" target="5">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="-642" y="-1130" as="sourcePoint"/>
+                        <mxPoint x="-504.4000000000001" y="-1024.61" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="export" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#FFCCFF;" vertex="1" connectable="0" parent="12">
+                    <mxGeometry x="0.0212" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

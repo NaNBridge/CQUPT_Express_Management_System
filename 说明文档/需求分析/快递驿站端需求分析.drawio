@@ -1,0 +1,51 @@
+<mxfile host="65bd71144e">
+    <diagram id="ToHjmqaBVsC4WZOhuRWg" name="第 1 页">
+        <mxGraphModel dx="700" dy="567" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;font color=&quot;#000000&quot;&gt;快递驿站&lt;/font&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.home;fillColor=#7FBA42;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="940" width="111" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;font color=&quot;#000000&quot;&gt;取错快递的用户&lt;/font&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.user;fillColor=#DA4026;" vertex="1" parent="1">
+                    <mxGeometry x="630" y="1200" width="96" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;font color=&quot;#000000&quot;&gt;被取错快递的用户&lt;/font&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.user;fillColor=#2072B8;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="1200" width="86" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="endArrow=classic;html=1;entryX=0.581;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#a20025;strokeColor=#6F0000;" edge="1" parent="1" source="2" target="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="1090" as="sourcePoint"/>
+                        <mxPoint x="600" y="1090" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="" style="shape=message;html=1;outlineConnect=0;" vertex="1" parent="6">
+                    <mxGeometry width="20" height="14" relative="1" as="geometry">
+                        <mxPoint x="22" y="-50" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="通知用户快递被别人取错了" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#000000;" vertex="1" connectable="0" parent="6">
+                    <mxGeometry x="0.1242" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=classic;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="1090" as="sourcePoint"/>
+                        <mxPoint x="600" y="1090" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="" style="shape=message;html=1;outlineConnect=0;" vertex="1" parent="8">
+                    <mxGeometry width="20" height="14" relative="1" as="geometry">
+                        <mxPoint x="-41" y="-50" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="通知该用户错取了别人的快递" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#000000;" vertex="1" connectable="0" parent="8">
+                    <mxGeometry x="0.1586" y="-3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
