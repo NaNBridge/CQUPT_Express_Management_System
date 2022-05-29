@@ -10,7 +10,7 @@ create table Packages(
     express_company varchar(100)not null,
     primary key (package_ID,package_owner_phone_number)
 );
--- 床架快递驿站表
+-- 创建快递驿站表
 create table Express_Station(
     package_ID varchar(50) not null ,
     pickup_user_student_ID decimal(10,0) not null ,
@@ -27,4 +27,8 @@ create table Users(
     user_phone_number decimal(11,0)not null unique ,
     unique_pickup_code varchar(50) not null unique ,
     primary key (user_name,user_phone_number,user_student_ID,unique_pickup_code)
-)
+);
+-- 表的删除语句
+drop table Packages cascade ;
+drop table Express_Station cascade ;
+drop table users cascade ;
