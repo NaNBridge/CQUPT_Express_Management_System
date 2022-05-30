@@ -16,11 +16,11 @@ class InsertDialog(QDialog):
         self.QBtn = QPushButton()
         self.QBtn.setText("登记")
 
-        self.setWindowTitle("添加学生信息")
+        self.setWindowTitle("添加快递信息")
         self.setFixedWidth(300)
         self.setFixedHeight(300)
 
-        self.setWindowTitle("插入学生数据")
+        self.setWindowTitle("录入快递")
         self.setFixedWidth(300)
         self.setFixedHeight(300)
 
@@ -32,24 +32,14 @@ class InsertDialog(QDialog):
         self.nameinput.setPlaceholderText("姓名")
         layout.addWidget(self.nameinput)
 
-        self.branchinput = QComboBox()
-        self.branchinput.addItem("Chemical Engg")
-        self.branchinput.addItem("Civil")
-        self.branchinput.addItem("Electrical")
-        self.branchinput.addItem("Electronics and Communication")
-        self.branchinput.addItem("Computer Engineering")
-        self.branchinput.addItem("Information Technology")
+        self.branchinput = QLineEdit()
+        self.branchinput.setPlaceholderText("学号")
         layout.addWidget(self.branchinput)
 
         self.seminput = QComboBox()
-        self.seminput.addItem("1")
-        self.seminput.addItem("2")
-        self.seminput.addItem("3")
-        self.seminput.addItem("4")
-        self.seminput.addItem("5")
-        self.seminput.addItem("6")
-        self.seminput.addItem("7")
-        self.seminput.addItem("8")
+        self.seminput.addItem("待取")
+        self.seminput.addItem("已取")
+        self.seminput.addItem("误取")
         layout.addWidget(self.seminput)
 
         self.mobileinput = QLineEdit()
@@ -57,7 +47,7 @@ class InsertDialog(QDialog):
         layout.addWidget(self.mobileinput)
 
         self.addressinput = QLineEdit()
-        self.addressinput.setPlaceholderText("家庭地址")
+        self.addressinput.setPlaceholderText("误取者信息（姓名、电话）")
         layout.addWidget(self.addressinput)
 
         layout.addWidget(self.QBtn)
@@ -72,7 +62,7 @@ class InsertDialog(QDialog):
         address = ""
 
         name = self.nameinput.text()
-        branch = self.branchinput.itemText(self.branchinput.currentIndex())
+        branch = self.branchinput.text()
         sem = self.seminput.itemText(self.seminput.currentIndex())
         mobile = self.mobileinput.text()
         address = self.addressinput.text()
@@ -83,10 +73,10 @@ class InsertDialog(QDialog):
             self.conn.commit()
             self.c.close()
             self.conn.close()
-            QMessageBox.information(QMessageBox(),'Successful','Student is added successfully to the database.')
+            QMessageBox.information(QMessageBox(),'Successful','Information is added successfully to the database.')
             self.close()
         except Exception:
-            QMessageBox.warning(QMessageBox(), 'Error', 'Could not add student to the database.')
+            QMessageBox.warning(QMessageBox(), 'Error', 'Could not add information to the database.')
 
 class SearchDialog(QDialog):
     def __init__(self, *args, **kwargs):
@@ -104,7 +94,7 @@ class SearchDialog(QDialog):
         self.searchinput = QLineEdit()
         self.onlyInt = QIntValidator()
         self.searchinput.setValidator(self.onlyInt)
-        self.searchinput.setPlaceholderText("Roll No.")
+        self.searchinput.setPlaceholderText("取件码")
         layout.addWidget(self.searchinput)
         layout.addWidget(self.QBtn)
         self.setLayout(layout)
@@ -118,13 +108,13 @@ class SearchDialog(QDialog):
             self.c = self.conn.cursor()
             result = self.c.execute("SELECT * from students WHERE roll="+str(searchrol))
             row = result.fetchone()
-            serachresult = "Rollno : "+str(row[0])+'\n'+"Name : "+str(row[1])+'\n'+"Branch : "+str(row[2])+'\n'+"Sem : "+str(row[3])+'\n'+"Address : "+str(row[4])
-            QMessageBox.information(QMessageBox(), 'Successful', serachresult)
+            serachresult = "取件码 : "+str(row[0])+'\n'+"姓名 : "+str(row[1])+'\n'+"学号 : "+str(row[2])+'\n'+"快递状态 : "+str(row[3])+'\n'+"电话 : "+str(row[4])+'\n'+"误取者信息 : "+str(row[5])
+            QMessageBox.information(QMessageBox(), '查询结果', serachresult)
             self.conn.commit()
             self.c.close()
             self.conn.close()
         except Exception:
-            QMessageBox.warning(QMessageBox(), 'Error', 'Could not Find student from the database.')
+            QMessageBox.warning(QMessageBox(), 'Error', 'Could not Find information from the database.')
 
 class DeleteDialog(QDialog):
     def __init__(self, *args, **kwargs):
@@ -133,7 +123,7 @@ class DeleteDialog(QDialog):
         self.QBtn = QPushButton()
         self.QBtn.setText("删除")
 
-        self.setWindowTitle("删除该学生")
+        self.setWindowTitle("删除该记录")
         self.setFixedWidth(300)
         self.setFixedHeight(100)
         self.QBtn.clicked.connect(self.deletestudent)
@@ -142,7 +132,7 @@ class DeleteDialog(QDialog):
         self.deleteinput = QLineEdit()
         self.onlyInt = QIntValidator()
         self.deleteinput.setValidator(self.onlyInt)
-        self.deleteinput.setPlaceholderText("Roll No.")
+        self.deleteinput.setPlaceholderText("取件码")
         layout.addWidget(self.deleteinput)
         layout.addWidget(self.QBtn)
         self.setLayout(layout)
@@ -161,7 +151,7 @@ class DeleteDialog(QDialog):
             QMessageBox.information(QMessageBox(),'Successful','Deleted From Table Successful')
             self.close()
         except Exception:
-            QMessageBox.warning(QMessageBox(), 'Error', 'Could not Delete student from the database.')
+            QMessageBox.warning(QMessageBox(), 'Error', 'Could not Delete pakage information from the database.')
 
 
 
@@ -182,8 +172,8 @@ class AboutDialog(QDialog):
 
         layout = QVBoxLayout()
         
-        self.setWindowTitle("About")
-        title = QLabel("Student Record Maintainer In PyQt5")
+        self.setWindowTitle("版本相关")
+        title = QLabel("菜鸟小邮 In PyQt5")
         font = title.font()
         font.setPointSize(20)
         title.setFont(font)
@@ -197,7 +187,7 @@ class AboutDialog(QDialog):
         layout.addWidget(title)
 
         layout.addWidget(QLabel("v2.0"))
-        layout.addWidget(QLabel("Copyright Okay Dexter 2019"))
+        layout.addWidget(QLabel("版权所有者 菜鸟小邮 2022"))
         layout.addWidget(labelpic)
 
 
@@ -216,10 +206,10 @@ class MainWindow(QMainWindow):
         self.c.execute("CREATE TABLE IF NOT EXISTS students(roll INTEGER PRIMARY KEY AUTOINCREMENT ,name TEXT,branch TEXT,sem INTEGER,mobile INTEGER,address TEXT)")
         self.c.close()
 
-        file_menu = self.menuBar().addMenu("&File")
+        file_menu = self.menuBar().addMenu("&操作")
 
-        help_menu = self.menuBar().addMenu("&About")
-        self.setWindowTitle("学生信息管理系统")
+        help_menu = self.menuBar().addMenu("&开发者")
+        self.setWindowTitle("菜鸟小邮——误取快递管理系统")
         self.setMinimumSize(800, 600)
 
         self.tableWidget = QTableWidget()
@@ -232,7 +222,7 @@ class MainWindow(QMainWindow):
         self.tableWidget.verticalHeader().setVisible(False)
         self.tableWidget.verticalHeader().setCascadingSectionResizes(False)
         self.tableWidget.verticalHeader().setStretchLastSection(False)
-        self.tableWidget.setHorizontalHeaderLabels(("序号", "姓名", "Branch", "Sem", "电话","地址"))
+        self.tableWidget.setHorizontalHeaderLabels(("取件码", "姓名", "学号", "快递状态", "电话","误取者信息"))
 
         toolbar = QToolBar()
         toolbar.setMovable(False)
@@ -241,9 +231,9 @@ class MainWindow(QMainWindow):
         statusbar = QStatusBar()
         self.setStatusBar(statusbar)
 
-        btn_ac_adduser = QAction(QIcon("icon/add1.jpg"), "Add Student", self)   #add student icon
+        btn_ac_adduser = QAction(QIcon("icon/add1.jpg"), "Add Pakage", self)   #add student icon
         btn_ac_adduser.triggered.connect(self.insert)
-        btn_ac_adduser.setStatusTip("Add Student")
+        btn_ac_adduser.setStatusTip("Add Pakage")
         toolbar.addAction(btn_ac_adduser)
 
         btn_ac_refresh = QAction(QIcon("icon/r3.png"),"Refresh",self)   #refresh icon
@@ -261,11 +251,11 @@ class MainWindow(QMainWindow):
         btn_ac_delete.setStatusTip("Delete User")
         toolbar.addAction(btn_ac_delete)
 
-        adduser_action = QAction(QIcon("icon/add1.jpg"),"Insert Student", self)
+        adduser_action = QAction(QIcon("icon/add1.jpg"),"Insert Pakage", self)
         adduser_action.triggered.connect(self.insert)
         file_menu.addAction(adduser_action)
 
-        searchuser_action = QAction(QIcon("icon/s1.png"), "Search Student", self)
+        searchuser_action = QAction(QIcon("icon/s1.png"), "Search Pakage", self)
         searchuser_action.triggered.connect(self.search)
         file_menu.addAction(searchuser_action)
 
