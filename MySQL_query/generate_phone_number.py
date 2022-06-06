@@ -37,6 +37,12 @@ def creat_phone():
 # 调用
 # print(creat_phone())
 #num = input('请输入生成的数量')
-num=int(10)
+filename="./user_phone_number.csv"
+f=open(filename, "w")
+num=int(283)
 for index in range(0,int(num)):
-    print(creat_phone())
+    f.write(creat_phone()+"\n")
+    print(index+1)
+
+
+f.close()
