@@ -1,0 +1,29 @@
+import tensorflow as tf
+import numpy as np
+from sklearn.datasets import load_iris
+data = load_iris()
+iris_data = np.float32(data.data)
+iris_target = (data.target)
+iris_target = np.float32(tf.keras.utils.to_categorical(iris_target,num_classes=3))
+train_data = tf.data.Dataset.from_tensor_slices((iris_data,iris_target)).batch(128)
+class MyLayer(tf.keras.layers.Layer):
+    def __init__(self, output_dim):
+        self.output_dim = output_dim
+        super(MyLayer, self).__init__()
+    def build(self, input_shape):
+        self.weight = tf.Variable(tf.random.normal([input_shape[-1],self.output_dim]), name="dense_weight")
+        self.bias = tf.Variable(tf.random.normal([self.output_dim]), name="bias_weight")
+        super(MyLayer, self).build(input_shape)  # Be sure to call this somewhere!
+    def call(self, input_tensor):
+        out = tf.matmul(input_tensor,self.weight) + self.bias
+        out = tf.nn.relu(out)
+        out = tf.keras.layers.Dropout(0.1)(out)
+        return out
+input_xs  = tf.keras.Input(shape=(4,), name='input_xs')
+out = tf.keras.layers.Dense(32, activation='relu', name='dense_1')(input_xs)
+out = MyLayer(32)(out)
+out = MyLayer(48)(out)
+out = tf.keras.layers.Dense(64, activation='relu', name='dense_2')(out)
+logits = tf.keras.layers.Dense(3, activation="softmax",name='predictions')(out)
+model = tf.keras.Model(inputs=input_xs, outputs=logits)
+print(model.summary())
