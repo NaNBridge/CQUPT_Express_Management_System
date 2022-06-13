@@ -5,7 +5,7 @@ import csv
 # 打开数据库连接
 conn = pymysql.connect(host="localhost",
                        user="root",
-                       password="200149",
+                       password="liang1925tt",
                        database="cquptems_db",
                        port=3306,
                        charset="utf8")
@@ -16,8 +16,8 @@ if conn:
 cur = conn.cursor()
 
 """打开csv文件"""
-filename = "D:/Project/CQUPT_Express_Management_System/CQUPTEMS_QT/TKINTER/data_set/user_information.csv"
-filename_2="D:/Project/CQUPT_Express_Management_System/MySQL_query/user_password.csv"
+filename = "F:\\study\\DBwork\\CQUPT_Express_Management_System\\CQUPTEMS_QT\\TKINTER\\data_set\\user_information.csv"
+filename_2 = "F:\\study\\DBwork\\CQUPT_Express_Management_System\\MySQL_query\\user_password.csv"
 f = open(filename_2, "r", encoding="utf-8")
 
 # 设置csv文件读取器

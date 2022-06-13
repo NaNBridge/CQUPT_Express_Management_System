@@ -53,7 +53,7 @@ values ('龚南桥', '2020211370', '15902364457', '1923500191540736252');
 
 -- 删除users表中的数据
 delete from users
-where user_name like "龚南桥";
+where user_name like ‘龚南桥’;
 
 -- 向Packages表中插入数据
 insert

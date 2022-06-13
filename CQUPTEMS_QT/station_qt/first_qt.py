@@ -32,7 +32,7 @@ widgetHello.setWindowTitle("My First QT") #设置窗体的 标题文字
 LabHello = QtWidgets.QLabel(widgetHello) #创建标签， 父容器为widgetHello 
 LabHello.setText("Hello World,PyQt5") #设置标签文 字
 font = QtGui.QFont() #创建字体对象font，用QFont类 
-font.setPointSize(12) #设置字体大小 
+font.setPointSize(12) #设置字体大小 ]]
 font.setBold(True) #设置为粗体
 # 设置为标签LabHello的字体 
 size=LabHello.sizeHint() #获取LabHello的合适大小，返回 值是QSize类对象 

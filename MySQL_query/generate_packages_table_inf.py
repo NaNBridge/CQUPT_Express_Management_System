@@ -11,7 +11,7 @@ fake = Faker('zh_CN')
 express_companies_list=['顺丰','中通','圆通','润通','百世','极兔快递','京东','申通','韵达','中国邮政']
 
 #打开存储电话号码的文件
-filename="D:/Project/CQUPT_Express_Management_System/MySQL_query/user_phone_number.csv"
+filename="./user_phone_number.csv"
 f=open(filename, "r")
 
 #定义一个csv读取器,读取电话号码
@@ -40,7 +40,7 @@ def generate_random_str(randomlength=50):
 # 打开数据库连接
 conn = pymysql.connect(host="localhost",
                        user="root",
-                       password="200149",
+                       password="liang1925tt",
                        database="cquptems_db",
                        port=3306,
                        charset="utf8")
