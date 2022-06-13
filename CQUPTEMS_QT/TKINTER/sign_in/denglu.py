@@ -15,7 +15,7 @@ import tkinter.messagebox as mgbox
 from pyrsistent import b
 import pymysql
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
-
+from CQUPTEMS_QT.TKINTER.sign_up import zhuce
 from cmath import pi
 from pathlib import Path
 from kawayiQuasimodo import yonghujiemian
@@ -204,20 +204,42 @@ def run_sign_in_page():
         fg="#fafafa"
     )
     button_login.place(
-        x=727.0,
-        y=521.0,
+        x=755.0,
+        y=460.0,
         width=81.0,
         height=45.0
     )
 
+
+    def zhuanzhuce():
+        window.destroy()
+        zhuce.run_sign_up_page()
+
     canvas.create_text(
-        744.0,
-        529.0,
+        700.0,
+        545.0,
         anchor="nw",
-        text="登录",
-        fill="#FFFFFF",
-        font=("Inter Regular", 24 * -1)
+        text="还没有账号？",
+        fill="#000000",
+        font=("Inter", 20 * -1)
     )
+    sign_up_button = Button(
+        # image=button_image_2,
+        borderwidth=0,
+        highlightthickness=0,
+        command=zhuanzhuce,
+        relief="flat",
+        text="注册",
+        bg="#54db79"
+    )
+    sign_up_button.place(
+        x=820.0,
+        y=530.0,
+        width=82.0,
+        height=42.0
+    )
+
+
     window.resizable(False, False)
     window.mainloop()
 
