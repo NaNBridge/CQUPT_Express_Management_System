@@ -455,8 +455,4 @@ def run_yonghujiemian_page(studentnumber):
 
     windownew.resizable(False, False)
     windownew.mainloop()
-if __name__ == "__main__":
-    run_yonghujiemian_page("2020211835")
-
-
 
