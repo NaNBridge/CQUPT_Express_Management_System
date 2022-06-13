@@ -1,16 +1,16 @@
-<mxfile host="65bd71144e">
+<mxfile host="65bd71144e" scale="1" border="0" disableSvgWarning="true">
     <diagram id="vGhVZlzQrohPR0lIglLp" name="第 1 页">
-        <mxGraphModel dx="700" dy="567" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+        <mxGraphModel dx="700" dy="444" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="&lt;font color=&quot;#000000&quot;&gt;用户&lt;/font&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.users;fillColor=#2072B8;" vertex="1" parent="1">
+                <mxCell id="2" value="&lt;font color=&quot;#000000&quot;&gt;用户&lt;/font&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.users;fillColor=#2072B8;" parent="1" vertex="1">
                     <mxGeometry x="230" y="480" width="146" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="&lt;font color=&quot;#000000&quot;&gt;快递驿站&lt;/font&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#432D57;fillColor=#76608a;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.services.federation_service;fontColor=#ffffff;" vertex="1" parent="1">
+                <mxCell id="3" value="&lt;font color=&quot;#000000&quot;&gt;快递驿站&lt;/font&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#432D57;fillColor=#76608a;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.services.federation_service;fontColor=#ffffff;" parent="1" vertex="1">
                     <mxGeometry x="238" y="870" width="130" height="129" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="" style="curved=1;endArrow=classic;html=1;fillColor=#647687;strokeColor=#314354;" edge="1" parent="1" source="3" target="2">
+                <mxCell id="4" value="" style="curved=1;endArrow=classic;html=1;fillColor=#647687;strokeColor=#314354;" parent="1" source="3" target="2" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="310" y="760" as="sourcePoint"/>
                         <mxPoint x="360" y="710" as="targetPoint"/>
@@ -20,12 +20,12 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="14" value="&lt;font color=&quot;#000000&quot;&gt;驿站发送相关信息&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4">
+                <mxCell id="14" value="&lt;font color=&quot;#000000&quot;&gt;驿站发送相关信息&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="4" vertex="1" connectable="0">
                     <mxGeometry x="-0.2892" y="-14" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="5" value="" style="curved=1;endArrow=classic;html=1;fillColor=#fa6800;strokeColor=#C73500;" edge="1" parent="1" source="3" target="2">
+                <mxCell id="5" value="" style="curved=1;endArrow=classic;html=1;fillColor=#fa6800;strokeColor=#C73500;" parent="1" source="3" target="2" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="310" y="760" as="sourcePoint"/>
                         <mxPoint x="360" y="710" as="targetPoint"/>
@@ -35,12 +35,12 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="15" value="&lt;font color=&quot;#000000&quot;&gt;驿站通知用户&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5">
+                <mxCell id="15" value="&lt;font color=&quot;#000000&quot;&gt;驿站通知用户&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="5" vertex="1" connectable="0">
                     <mxGeometry x="0.398" y="12" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="6" value="" style="endArrow=classic;html=1;fillColor=#647687;strokeColor=#314354;" edge="1" parent="1" source="2" target="3">
+                <mxCell id="6" value="" style="endArrow=classic;html=1;fillColor=#647687;strokeColor=#314354;" parent="1" source="2" target="3" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="310" y="760" as="sourcePoint"/>
                         <mxPoint x="360" y="710" as="targetPoint"/>
@@ -49,12 +49,12 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="12" value="&lt;font color=&quot;#000000&quot;&gt;用户错取了别人的快递&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="6">
+                <mxCell id="12" value="&lt;font color=&quot;#000000&quot;&gt;用户错取了别人的快递&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="6" vertex="1" connectable="0">
                     <mxGeometry x="-0.548" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="7" value="" style="endArrow=classic;html=1;fillColor=#fa6800;strokeColor=#C73500;" edge="1" parent="1" source="2" target="3">
+                <mxCell id="7" value="" style="endArrow=classic;html=1;fillColor=#fa6800;strokeColor=#C73500;" parent="1" source="2" target="3" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="310" y="760" as="sourcePoint"/>
                         <mxPoint x="360" y="710" as="targetPoint"/>
@@ -63,21 +63,21 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="13" value="&lt;font color=&quot;#000000&quot;&gt;用户被别人取错了快递&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7">
+                <mxCell id="13" value="&lt;font color=&quot;#000000&quot;&gt;用户被别人取错了快递&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="7" vertex="1" connectable="0">
                     <mxGeometry x="0.3853" y="-1" relative="1" as="geometry">
                         <mxPoint x="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="22" value="&lt;ul&gt;&lt;li&gt;快递1相关信息&lt;/li&gt;&lt;li&gt;快递2相关信息&lt;/li&gt;&lt;li&gt;快递3相关信息&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+                <mxCell id="22" value="&lt;ul&gt;&lt;li&gt;快递1相关信息&lt;/li&gt;&lt;li&gt;快递2相关信息&lt;/li&gt;&lt;li&gt;快递3相关信息&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="1" vertex="1">
                     <mxGeometry x="223" y="190" width="160" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" value="&lt;font style=&quot;font-size: 15px&quot;&gt;用户快递信息&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                <mxCell id="23" value="&lt;font style=&quot;font-size: 15px&quot;&gt;用户快递信息&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
                     <mxGeometry x="253" y="300" width="100" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;fontSize=15;opacity=20;strokeColor=none;strokeWidth=13;fillColor=#FFB366;" vertex="1" parent="1">
+                <mxCell id="24" value="" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;fontSize=15;opacity=20;strokeColor=none;strokeWidth=13;fillColor=#FFB366;" parent="1" vertex="1">
                     <mxGeometry x="233" y="220" width="140" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="27" value="查看" style="shape=singleArrow;direction=north;whiteSpace=wrap;html=1;fontSize=15;fontColor=#000000;strokeColor=#7F00FF;strokeWidth=13;fillColor=#FFB366;" vertex="1" parent="1">
+                <mxCell id="27" value="查看" style="shape=singleArrow;direction=north;whiteSpace=wrap;html=1;fontSize=15;fontColor=#000000;strokeColor=#7F00FF;strokeWidth=13;fillColor=#FFB366;" parent="1" vertex="1">
                     <mxGeometry x="273" y="350" width="60" height="120" as="geometry"/>
                 </mxCell>
             </root>
