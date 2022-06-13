@@ -1,0 +1,75 @@
+<mxfile host="65bd71144e" scale="1" border="0" disableSvgWarning="true">
+    <diagram id="0RBo-rwa9-0GU5vAzvuR" name="第 1 页">
+        <mxGraphModel dx="1800" dy="807" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="19" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="260" y="930" width="730" height="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;endArrow=none;endFill=0;" edge="1" parent="19" source="3">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="365" y="273.4782608695652" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="&lt;font color=&quot;#000000&quot;&gt;快递驿站端&lt;/font&gt;" style="shape=mxgraph.signs.tech.computer;html=1;pointerEvents=1;fillColor=#008a00;strokeColor=#005700;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;fontSize=16;fontColor=#ffffff;" vertex="1" parent="19">
+                    <mxGeometry x="297.5094339622642" width="134.98113207547172" height="157.6521739130435" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="19" source="4">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="179.43656473649978" y="273.4782608695652" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="判断快递是否被错取" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" vertex="1" parent="19">
+                    <mxGeometry x="123.96226415094341" y="321.73913043478257" width="110.18867924528304" height="48.26086956521739" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="19" source="6">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="550.8484059856864" y="273.4782608695652" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="通知涉及错取快递的两个用户" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" vertex="1" parent="19">
+                    <mxGeometry x="495.84905660377365" y="318.52173913043475" width="110.18867924528304" height="48.26086956521739" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="19" source="7">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="302.9238776837996" y="273.4782608695652" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="人脸识别取件" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" vertex="1" parent="19">
+                    <mxGeometry x="247.92452830188682" y="321.73913043478257" width="110.18867924528304" height="48.26086956521739" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="19" source="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="427.36109303838657" y="273.4782608695652" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="录入用户人脸信息" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" vertex="1" parent="19">
+                    <mxGeometry x="371.8867924528302" y="321.73913043478257" width="110.18867924528304" height="48.26086956521739" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="19" source="9">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="54.99934938191281" y="273.4782608695652" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="查看快递信息" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" vertex="1" parent="19">
+                    <mxGeometry y="321.73913043478257" width="110.18867924528304" height="48.26086956521739" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="19" source="10">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="675.2856213402735" y="273.4782608695652" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="查看并处理错取快递" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" vertex="1" parent="19">
+                    <mxGeometry x="619.811320754717" y="318.52173913043475" width="110.18867924528304" height="48.26086956521739" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=none;html=1;" edge="1" parent="19">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="55.09433962264152" y="273.4782608695652" as="sourcePoint"/>
+                        <mxPoint x="674.9056603773586" y="273.4782608695652" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

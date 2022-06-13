@@ -24,7 +24,7 @@ def run_sign_in_page():
     window.geometry("1024x633")
     window.configure(bg = "#FFFFFF")
 
-    #TODO:定义登录时需要执行的函数
+    #todo:定义登录时需要执行的函数
     def login():
         #获取输入的密码和学号
         password=entry_password.get()

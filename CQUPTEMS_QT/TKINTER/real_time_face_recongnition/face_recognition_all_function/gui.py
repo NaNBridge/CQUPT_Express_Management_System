@@ -2,12 +2,13 @@ from cv2 import VideoCapture
 import face_recognition
 import numpy as np
 from pathlib import Path
-from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage,messagebox
+from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, messagebox
 import cv2
 import tkinter as tk
 from tkinter import *
 from PIL import Image, ImageTk  # 图像控件
 import time
+import pinyin
 
 
 class Face_Pickup:
@@ -15,7 +16,7 @@ class Face_Pickup:
     def __init__(self):
         # 创建摄像头对象
         self.cap = cv2.VideoCapture(0)
-        self.faci_pickup()
+        self.face_pickup()
 
     def tkImage(self):
 
@@ -28,7 +29,7 @@ class Face_Pickup:
         tkImage = ImageTk.PhotoImage(image=pilImage)
         return tkImage
 
-    def faci_pickup(self):
+    def face_pickup(self):
 
         OUTPUT_PATH = Path(__file__).parent
         ASSETS_PATH = OUTPUT_PATH / Path("./assets")
@@ -101,19 +102,25 @@ class Face_Pickup:
         #video_capture = cv2.VideoCapture(0)
         video_capture = self.cap
         # 读取图片，并将其编码方便后续识别
+        wangjun_image = face_recognition.load_image_file(
+            "D:/Project/CQUPT_Express_Management_System/CQUPTEMS_QT/TKINTER/img/face_pictures/fixed/王俊.jpg"
+        )
         nanqiao_gong_image = face_recognition.load_image_file(
             "D:/Project/CQUPT_Express_Management_System/CQUPTEMS_QT/TKINTER/img/face_pictures/fixed/龚南桥.jpg")
         nanqiao_gong_face_encoding = face_recognition.face_encodings(nanqiao_gong_image)[
             0]
-
+        wangjun_face_encoding = face_recognition.face_encodings(wangjun_image)[
+            0]
         # 添加已知人脸
         known_face_encodings = [
-            nanqiao_gong_face_encoding
+            nanqiao_gong_face_encoding,
+            wangjun_face_encoding
 
         ]
         # 添加人名
         known_face_names = [
-            "GongNQ"
+            "龚南桥",
+            "王俊"
 
         ]
 
@@ -122,10 +129,10 @@ class Face_Pickup:
         face_encodings = []
         face_names = []
         process_this_frame = True
-        #识别成功后提示框返回的结果
-        boo=None
+        # 识别成功后提示框返回的结果
+        boo = None
         while True:
-            
+
             # 获取一个单一窗口
             ret, frame = video_capture.read()
             # 定义视频帧
@@ -160,16 +167,16 @@ class Face_Pickup:
                         name = known_face_names[best_match_index]
                         print(name)
                     face_names.append(name)
-                    boo=(name in known_face_names)
+                    boo = (name in known_face_names)
                     # if name in known_face_names:
                     #     boo=messagebox.askokcancel("成功取件提示",f"{name},您好!\n您已成功取件")
-                        #messagebox.showinfo(name,"您好!\n您已成功取件")
-                        # if boo==True:
-                        #     cv2.destroyAllWindows()
-                        #video_capture.release()
-                        #cv2.destroyAllWindows()
-                        #break
-                        #pass
+                    # messagebox.showinfo(name,"您好!\n您已成功取件")
+                    # if boo==True:
+                    #     cv2.destroyAllWindows()
+                    # video_capture.release()
+                    # cv2.destroyAllWindows()
+                    # break
+                    # pass
 
             process_this_frame = not process_this_frame
 
@@ -192,7 +199,10 @@ class Face_Pickup:
                 cv2.rectangle(frame, (left, bottom - 35),
                               (right, bottom), (0, 0, 255), cv2.FILLED)
                 font = cv2.FONT_HERSHEY_DUPLEX
-                cv2.putText(frame,name, (left + 6, bottom - 6),
+                nameStr = str()
+                for char in name:
+                    nameStr += pinyin.get(char)[0].upper()
+                cv2.putText(frame, nameStr, (left + 6, bottom - 6),
                             font, 1.0, (255, 255, 255), 1)
 
             # 展示结果图像
@@ -213,7 +223,7 @@ class Face_Pickup:
             """
             # 按‘q’关闭
             if (cv2.waitKey(1) & 0xFF == ord('q')):
-                messagebox.askokcancel("成功取件提示",f"{name},您好!\n您已成功取件")
+                messagebox.askokcancel("成功取件提示", f"{name},您好!\n您已成功取件")
                 break
 
         # 释放摄像头权限
@@ -221,8 +231,9 @@ class Face_Pickup:
         cv2.destroyAllWindows()
 
         pass
-    def zh_ch(self,string):    
-	    return string.encode("gbk").decode(errors="ignore")
+
+    def zh_ch(self, string):
+        return string.encode("gbk").decode(errors="ignore")
 
 
 if __name__ == "__main__":

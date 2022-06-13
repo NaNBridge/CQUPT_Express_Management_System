@@ -108,3 +108,26 @@ WHERE package_owner_phone_number LIKE '15902364472';
 SELECT user_student_ID,user_password
 FROM Users
 WHERE user_student_ID='2020211370' AND user_password='9VpOZn';
+
+-- 修改用户表,增加一个属性,face_location,代表用户人脸图片存储的路径
+ALTER TABLE Users
+ADD (who_pickup VARCHAR(10) DEFAULT NULL,
+    face_location VARCHAR(100) DEFAULT NULL);
+-- who_pickup属性是表express_station中的,这里需要修改一下
+ALTER TABLE Users
+DROP COLUMN who_pickup;
+
+ALTER TABLE Express_Station
+ADD (who_pickup VARCHAR(10) DEFAULT NULL);
+-- 插入部我自己的人脸图片路径和另一个队友的人脸图片路径
+UPDATE Users
+SET face_location="D:/Project/CQUPT_Express_Management_System/CQUPTEMS_QT/TKINTER/img/face_pictures/fixed/龚南桥.jpg"
+WHERE user_name LIKE "龚南桥";
+
+UPDATE Users
+SET cquptems_db.Users.face_location="D:/Project/CQUPT_Express_Management_System/CQUPTEMS_QT/TKINTER/img/face_pictures/fixed/王俊.jpg"
+WHERE user_name LIKE "王俊";
+
+SELECT user_name,Users.face_location
+FROM Users
+WHERE Users.face_location IS NOT NULL ;
