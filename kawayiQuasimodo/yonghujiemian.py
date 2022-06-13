@@ -64,8 +64,8 @@ def run_yonghujiemian_page(studentnumber):
             width=500,
         )
         for row in rows:
-            xianshi.insert("end",str(row)[2:51] + "\n")
-            xianshi.insert("end", str(row)[54:-1] + "\n")
+            xianshi.insert("end", "快递ID:   " + str(row)[2:51] + "\n")
+            xianshi.insert("end", "入库时间:  " + str(row)[54:-1] + "\n")
             xianshi.insert("end", "\n")
         new_text = ""
         xianshi.place(
@@ -126,8 +126,8 @@ def run_yonghujiemian_page(studentnumber):
             width=500,
         )
         for row in rows:
-            xianshi.insert("end", str(row)[2:51] + "\n")
-            xianshi.insert("end", str(row)[54:-1] + "\n")
+            xianshi.insert("end", "快递ID:   " + str(row)[2:51] + "\n")
+            xianshi.insert("end", "入库时间:  " + str(row)[54:-1] + "\n")
             xianshi.insert("end", "\n")
         new_text = ""
         xianshi.place(
@@ -167,7 +167,34 @@ def run_yonghujiemian_page(studentnumber):
         """
         excute_result = cur.execute(sql_sentence)
         rows = cur.fetchall()
-        print(rows)
+        new_text = ""
+        for row in rows:
+            new_text += str(row)
+        xianshi = Text(
+            windownew,
+            width=500,
+        )
+        for row in rows:
+            xianshi.insert("end", "快递ID:   " + str(row)[2:51] + "\n")
+            xianshi.insert("end", "入库时间:  " + str(row)[54:-1] + "\n")
+            xianshi.insert("end", "\n")
+        new_text = ""
+        xianshi.place(
+            x=150.0,
+            y=150.0,
+            width=600.0,
+            height=800.0
+        )
+
+        xianshi.place(
+            x=60.0,
+            y=60.0,
+            width=480.0,
+            height=520.0
+        )
+        gundongy = Scrollbar(xianshi, orient=VERTICAL)
+        gundongy.pack(side=RIGHT, fill=Y)
+        gundongy.config(command=xianshi.yview)
         print(excute_result)
         myconn.close()
         pass
@@ -455,8 +482,4 @@ def run_yonghujiemian_page(studentnumber):
 
     windownew.resizable(False, False)
     windownew.mainloop()
-if __name__ == "__main__":
-    run_yonghujiemian_page("2020211835")
-
-
 
