@@ -103,7 +103,7 @@ def run_yonghujiemian_page(studentnumber):
         student_id = studentnumber
         myconn = pymysql.connect(host="localhost",
                                  user="root",
-                                 password="liang1925tt",
+                                 password="200149",
                                  database="cquptems_db",
                                  port=3306, charset="utf8")
         cur = myconn.cursor()

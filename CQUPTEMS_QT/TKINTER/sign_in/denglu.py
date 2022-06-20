@@ -51,7 +51,7 @@ def run_sign_in_page():
         #连接数据库
         myconn=pymysql.connect(host="localhost",
                             user="root",
-                            password="liang1925tt",
+                            password="200149",
                             database="cquptems_db",
                             port=3306,charset="utf8")
         #获取游标对象
