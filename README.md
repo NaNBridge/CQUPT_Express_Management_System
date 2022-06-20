@@ -66,4 +66,7 @@ Can be used directly if needed. Students, if you want to copy it, you need to be
 If you want to take it directly to participate in the database competition, it is recommended to modify the color of the GUI or the like, and the project name is best restarted to avoid being discovered.  
 
 
-### 总之,代码写的很垃圾.见谅见谅!
+### 总之,代码写的很垃圾.见谅见谅!  
+
+哦,对了,参赛的文档是在  
+说明文档\CQUPT错取快递管理系统.docx
